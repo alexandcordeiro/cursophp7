@@ -28,10 +28,14 @@ require_once("config.php");
 //echo $aluno;
 
 //Atualizar dados do usuario 
-$usuario = new Usuario();
-
+/*$usuario = new Usuario();
 $usuario->loadById(7);
 $usuario->update("professor", "@professor");
+echo $usuario;*/
 
+//Deletar um usuario
+$usuario = new Usuario();
+$usuario->loadById(6);
+$usuario->delete();
 echo $usuario;
 ?>
