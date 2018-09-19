@@ -18,8 +18,20 @@ require_once("config.php");
 //echo json_encode($search);
 
 //Carrega o usuario com login e senha
+  //$usuario = new Usuario();
+  //$usuario->login("root","456789");
+  ///echo $usuario;
 
-  $usuario = new Usuario();
-  $usuario->login("root","456789");
-  echo $usuario;
+//INserir usuarios no banco
+//$aluno = new Usuario("aluno 2", "@aluno");
+//$aluno->insert();
+//echo $aluno;
+
+//Atualizar dados do usuario 
+$usuario = new Usuario();
+
+$usuario->loadById(7);
+$usuario->update("professor", "@professor");
+
+echo $usuario;
 ?>
